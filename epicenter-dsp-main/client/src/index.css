@@ -274,3 +274,30 @@
     oklch(0.65 0.22 35) 100%
   );
 }
+
+/* Portrait/mobile layout tuning */
+@media (max-width: 768px) and (orientation: portrait) {
+  .portrait-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .portrait-main {
+    padding-top: 0.75rem;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .portrait-download-cta {
+    position: sticky;
+    top: calc(0.5rem + env(safe-area-inset-top, 0px));
+  }
+
+  .portrait-knobs {
+    justify-content: space-evenly;
+  }
+
+  .portrait-knobs > * {
+    transform: scale(0.92);
+    transform-origin: top center;
+  }
+}

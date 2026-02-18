@@ -97,7 +97,7 @@ export default function Home() {
   }, [selectedFile, sweepFreq, width, intensity, balance, volume, reverbEnabled, reverbIntensity, processAudio]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden portrait-page">
       {/* Header */}
       <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container py-4">
@@ -204,7 +204,7 @@ export default function Home() {
       </header>
 
       {/* Botón fijo superior para descarga */}
-      <div className="fixed top-20 left-1/2 -translate-x-1/2 z-40 px-4 w-full max-w-lg">
+      <div className="relative z-40 px-4 w-full max-w-lg mx-auto mt-4 md:fixed md:top-20 md:left-1/2 md:-translate-x-1/2 md:mt-0 portrait-download-cta">
         <a
           href={appStoreUrl}
           target="_blank"
@@ -220,9 +220,9 @@ export default function Home() {
 
       <MobileAdBanner />
 
-      <main className="container py-8">
-        <div className="grid lg:grid-cols-[1fr_300px] gap-8">
-          <div className="space-y-8">
+      <main className="container py-6 md:py-8 portrait-main">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6 md:gap-8">
+          <div className="space-y-6 md:space-y-8">
             {/* Anuncio Superior */}
             <AdSense 
               adSlot="1111111111" 
@@ -259,7 +259,7 @@ export default function Home() {
                   </div>
 
                   {/* Knobs */}
-                  <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+                  <div className="flex flex-wrap justify-center gap-5 sm:gap-6 md:gap-12 portrait-knobs">
                     <Knob
                       value={sweepFreq}
                       min={27}
