@@ -12,14 +12,15 @@
     "test": "vitest run",
     "db:push": "drizzle-kit generate && drizzle-kit migrate",
     "build:mobile": "vite build",
-    "cap:sync": "npm run build:mobile && npx cap sync",
+    "cap:sync": "npm run deps:ensure && npm run build:mobile && npx cap sync",
     "cap:android": "npx cap open android",
-    "cap:add:android": "npm run build:mobile && npx cap add android && npx cap sync android",
-    "android:sync": "npm run build:mobile && npx cap sync android",
+    "cap:add:android": "npm run deps:ensure && npm run build:mobile && npx cap add android && npx cap sync android",
+    "android:sync": "npm run deps:ensure && npm run build:mobile && npx cap sync android",
     "android:run": "npx cap run android",
     "android:open": "npx cap open android",
     "android:gradle:debug": "cd android && ./gradlew assembleDebug",
-    "android:gradle:release": "cd android && ./gradlew bundleRelease"
+    "android:gradle:release": "cd android && ./gradlew bundleRelease",
+    "deps:ensure": "[ -d node_modules ] || pnpm install"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",

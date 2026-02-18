@@ -137,6 +137,7 @@ Si tu flujo principal será Android Studio, sigue la guía dedicada:
 Comandos rápidos:
 
 ```bash
+pnpm install
 pnpm run cap:add:android
 pnpm run android:open
 ```

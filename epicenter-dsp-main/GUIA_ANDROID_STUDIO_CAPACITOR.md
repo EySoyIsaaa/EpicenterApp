@@ -109,6 +109,7 @@ Solución rápida:
 
 ```bash
 rm -rf android
+pnpm install
 pnpm run cap:add:android
 ```
 
@@ -126,6 +127,7 @@ El script `cap:add:android` ya hace build web + add android + sync automáticame
 ## 10) Comandos resumidos
 
 ```bash
+pnpm install
 pnpm run cap:add:android
 pnpm run android:open
 pnpm run android:sync
