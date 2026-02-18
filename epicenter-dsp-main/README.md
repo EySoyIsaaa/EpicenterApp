@@ -127,6 +127,22 @@ El proyecto viene pre-configurado con espacios para anuncios:
 3. Actualiza los slots en `client/src/pages/Home.tsx`
 4. Deploy y espera aprobación (1-2 días)
 
+
+### Trabajar con Android Studio + Gradle + Capacitor
+
+Si tu flujo principal será Android Studio, sigue la guía dedicada:
+
+- [GUIA_ANDROID_STUDIO_CAPACITOR.md](./GUIA_ANDROID_STUDIO_CAPACITOR.md)
+
+Comandos rápidos:
+
+```bash
+pnpm run build:mobile
+pnpm run cap:add:android
+pnpm run cap:sync
+pnpm run android:open
+```
+
 ### Configurar AdMob (Android con Capacitor)
 
 1. Crea una app en AdMob y obtén `App ID` + `Banner ID` de Android.
@@ -136,9 +152,9 @@ El proyecto viene pre-configurado con espacios para anuncios:
 
 ```bash
 pnpm run build:mobile
+pnpm run cap:add:android
 pnpm run cap:sync
-npx cap add android
-pnpm run cap:android
+pnpm run android:open
 ```
 
 **Estimación de ingresos**:

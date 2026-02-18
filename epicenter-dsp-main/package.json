@@ -13,7 +13,13 @@
     "db:push": "drizzle-kit generate && drizzle-kit migrate",
     "build:mobile": "vite build",
     "cap:sync": "npx cap sync",
-    "cap:android": "npx cap open android"
+    "cap:android": "npx cap open android",
+    "cap:add:android": "npx cap add android",
+    "android:sync": "npm run build:mobile && npx cap sync android",
+    "android:run": "npx cap run android",
+    "android:open": "npx cap open android",
+    "android:gradle:debug": "cd android && ./gradlew assembleDebug",
+    "android:gradle:release": "cd android && ./gradlew bundleRelease"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",
