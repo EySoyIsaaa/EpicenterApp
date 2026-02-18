@@ -137,9 +137,7 @@ Si tu flujo principal será Android Studio, sigue la guía dedicada:
 Comandos rápidos:
 
 ```bash
-pnpm run build:mobile
 pnpm run cap:add:android
-pnpm run cap:sync
 pnpm run android:open
 ```
 
@@ -151,9 +149,7 @@ pnpm run android:open
 4. Sincroniza Capacitor y compila Android:
 
 ```bash
-pnpm run build:mobile
 pnpm run cap:add:android
-pnpm run cap:sync
 pnpm run android:open
 ```
 

@@ -26,9 +26,7 @@ pnpm install
 > Ejecuta esto una sola vez al inicializar Android.
 
 ```bash
-pnpm run build:mobile
 pnpm run cap:add:android
-pnpm run cap:sync
 ```
 
 ---
@@ -102,6 +100,20 @@ O manualmente en Gradle:
 
 ## 9) Troubleshooting
 
+
+### Error: `The web assets directory (./dist) must contain an index.html file`
+
+Ese error aparece cuando ejecutas `npx cap add android` sin haber generado `dist`.
+
+Solución rápida:
+
+```bash
+rm -rf android
+pnpm run cap:add:android
+```
+
+El script `cap:add:android` ya hace build web + add android + sync automáticamente.
+
 - Si Android no refleja cambios web:
   - `pnpm run android:sync`
 - Si falla Gradle por JDK:
@@ -114,9 +126,7 @@ O manualmente en Gradle:
 ## 10) Comandos resumidos
 
 ```bash
-pnpm run build:mobile
 pnpm run cap:add:android
-pnpm run cap:sync
 pnpm run android:open
 pnpm run android:sync
 pnpm run android:gradle:debug
